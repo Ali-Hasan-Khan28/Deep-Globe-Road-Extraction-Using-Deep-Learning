@@ -2,9 +2,11 @@
 
 ## Overview
 
-This repository contains a Jupyter notebook (`DNN_ALL_CODE.ipynb`) showcasing the implementation of a DeepLabV3+ model for road extraction using the DeepGlobe Road Extraction Dataset. The code is designed for Google Colab and covers key steps such as data download, preprocessing, model training, and evaluation.
+This repository contains a comprehensive Jupyter notebook (`DNN_ALL_CODE.ipynb`) that demonstrates the end-to-end process of training a DeepLabV3+ model for road extraction. The model is trained on the DeepGlobe Road Extraction Dataset, and the code is specifically designed to run on Google Colab.
 
 ## Getting Started
+![image](https://github.com/Ali-Hasan-Khan28/Deep-Globe-Road-Extraction-Using-Deep-Learning/assets/101451471/111c4ab1-7fd3-446c-b236-4a2a69063590)
+
 
 ### Prerequisites
 
@@ -14,19 +16,25 @@ This repository contains a Jupyter notebook (`DNN_ALL_CODE.ipynb`) showcasing th
 
 ### Kaggle API Setup
 
-Before running the code, set up your Kaggle API credentials. Upload the Kaggle API key as instructed in the notebook.
+Before running the code, make sure to set up your Kaggle API credentials. Upload the Kaggle API key as instructed in the notebook. This step is crucial for downloading the DeepGlobe Road Extraction Dataset.
 
-### Dataset
+### Dataset Download
 
-The code downloads the [DeepGlobe Road Extraction Dataset](https://www.kaggle.com/datasets/balraj98/deepglobe-road-extraction-dataset) using the Kaggle API. Replace the placeholder with your Kaggle username and key.
+The notebook utilizes the Kaggle API to download the [DeepGlobe Road Extraction Dataset](https://www.kaggle.com/datasets/balraj98/deepglobe-road-extraction-dataset). Replace the placeholder with your Kaggle username and key.
 
 ## Data Preprocessing
 
-Functions for data preprocessing include shuffling, augmentation, and one-hot encoding of masks.
+The code includes functions for thorough data preprocessing. This involves:
+- Shuffling the dataset
+- Augmentation (Horizontal and Vertical Flip)
+- One-hot encoding of masks
 
 ## Model Architecture
 
-The notebook uses the DeepLabV3+ architecture with a ResNet50 encoder pre-trained on ImageNet. Training employs the Dice Loss, and evaluation is based on Intersection over Union (IoU) score.
+The notebook employs the DeepLabV3+ architecture with a ResNet50 encoder pre-trained on ImageNet. The model is configured for road extraction, with the training objective defined by the Dice Loss. Evaluation is performed using Intersection over Union (IoU) score.
+
+![image](https://github.com/Ali-Hasan-Khan28/Deep-Globe-Road-Extraction-Using-Deep-Learning/assets/101451471/5e1ce471-62a0-40df-b1fd-f94dcbb32fa1)
+
 
 ## Training
 
@@ -34,21 +42,25 @@ The training process is controlled by the `TRAINING` variable. If set to `True`,
 
 ## Inference and Visualization
 
-The trained model is loaded for inference on a subset of the validation dataset. Visualization includes original images, ground truth masks, and predicted masks.
+The notebook includes an inference section where the trained model is loaded, and predictions are generated for a subset of the validation dataset. Visualization includes original images, ground truth masks, and predicted masks. This provides an intuitive understanding of the model's performance.
 
 ## Evaluation
 
-Evaluation metrics on the test dataset are provided, including Mean IoU Score and Mean Dice Loss.
+The notebook evaluates the model on the test dataset, presenting metrics such as Mean IoU Score and Mean Dice Loss. These metrics give insights into the model's effectiveness in road extraction.
 
 ## Results
 
-Plots of IoU Score and Dice Loss over epochs are generated and saved as `iou_score_plot.png` and `dice_loss_plot.png`.
+The repository generates two key plots to visualize the model's performance over epochs:
+- `iou_score_plot.png`: Plot of IoU Score
+- `dice_loss_plot.png`: Plot of Dice Loss
+
+![image](https://github.com/Ali-Hasan-Khan28/Deep-Globe-Road-Extraction-Using-Deep-Learning/assets/101451471/a2f7b5c7-5adf-4d58-91ff-cede3905cf41)
+
+
+![image](https://github.com/Ali-Hasan-Khan28/Deep-Globe-Road-Extraction-Using-Deep-Learning/assets/101451471/8d7c7a83-c9e1-46f3-bf92-369b4365a29c)
+
 
 ## Author
 
-[Your Name]
-
-## Acknowledgments
-
-- The code is adapted from a Kaggle competition and uses the `segmentation-models-pytorch` library.
+Ali Hasan Khan
 
