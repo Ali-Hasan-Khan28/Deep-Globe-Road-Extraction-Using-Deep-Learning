@@ -2,7 +2,7 @@
 
 ## Overview
 
-This repository contains a comprehensive Jupyter notebook (`DNN_ALL_CODE.ipynb`) that demonstrates the end-to-end process of training a DeepLabV3+ model for road extraction. The model is trained on the DeepGlobe Road Extraction Dataset, and the code is specifically designed to run on Google Colab.
+This repository contains a comprehensive Jupyter notebook (`Road_Extraction_Using_Satellite_Images.ipynb`) that demonstrates the end-to-end process of training a DeepLabV3+ model for road extraction. The model is trained on the DeepGlobe Road Extraction Dataset, and the code is specifically designed to run on Google Colab.
 
 ## Getting Started
 ![image](https://github.com/Ali-Hasan-Khan28/Deep-Globe-Road-Extraction-Using-Deep-Learning/assets/101451471/111c4ab1-7fd3-446c-b236-4a2a69063590)
